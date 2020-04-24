@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_top"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/toolBarColor">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/toolBarText"
+            android:id="@+id/toolbar_title"
+            android:text="@string/app_name"
+            android:textSize="25sp"/>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:id="@+id/todo_list_view"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:background="@color/listViewColor"
+        android:divider="@color/listViewDivider"
+        android:dividerHeight="1dip"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/new_task_edit_text"
+        android:hint="@string/edit_text_hint_new_task"
+        android:visibility="gone">
+
+        <requestFocus/>
+
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/new_task_button_linear_layout"
+        android:visibility="gone">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/save_button"
+            android:background="@color/new_saveButton"
+            android:text="@string/button_save"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/cancel_button"
+            android:background="@color/clear_cancelButton"
+            android:text="@string/button_cancel"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/control_buttons_linear_layout">
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/add_button"
+            android:text="@string/button_add"
+            android:layout_width="fill_parent"
+            android:background="@color/new_saveButton"/>
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/clear_button"
+            android:text="@string/button_clear"
+            android:layout_width="fill_parent"
+            android:background="@color/clear_cancelButton"/>
+
+    </LinearLayout>
+
+</LinearLayout>
